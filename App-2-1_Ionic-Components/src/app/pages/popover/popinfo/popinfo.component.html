@@ -1,0 +1,22 @@
+<ion-list>
+	<ion-list-header>Neuer Ticketstatus</ion-list-header>
+
+	<ion-item>
+		<ion-label>Estado</ion-label>
+		<ion-select placeholder="Select One" [(ngModel)]="item">
+			<ion-select-option *ngFor="let item of items; let i = index" [value]="i + 1">
+				{{ i + 1 }}
+			</ion-select-option>
+		</ion-select>
+	</ion-item>
+
+	<ion-item>
+		<ion-label>Hair Color</ion-label>
+		<ion-select value="brown" okText="Okay" cancelText="Dismiss">
+			<ion-select-option value="brown">Brown</ion-select-option>
+			<ion-select-option value="blonde">Blonde</ion-select-option>
+			<ion-select-option value="black">Black</ion-select-option>
+			<ion-select-option value="red">Red</ion-select-option>
+		</ion-select>
+	</ion-item>
+</ion-list>

@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar><ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+        <ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+        <ion-title>Learning CSS</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h3>Define viewport in header</h3>
+    <textarea readonly="readonly" rows=4 cols=100 disabled="true" >
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+</head>
+    </textarea>
+
+    <h3>Use link tag in header to include css file</h3>
+    <textarea readonly="readonly" rows=2 cols=100 disabled="true">
+<link rel="stylesheet" type="text/css" href="path/to/style.css"/>
+    </textarea>
+
+    <h3>You can also include some CSS inline in your markup.</h3>
+    <textarea readonly="readonly" rows=6 cols=100 disabled="true">
+<style>
+    a {
+        color: purple;
+    }
+</style>
+    </textarea>
+
+    <h3>Or directly set CSS properties on the element.</h3>
+    <textarea readonly="readonly" rows=2 cols=100 disabled="true">
+<div style="border: 1px solid red;"></div>
+    </textarea>
+
+    <div style="border: 1px solid red;">
+        Or directly set CSS properties on the element.
+    </div>
+
+    <div
+        class="class1 class2"
+        id="anID"
+        attr="value"
+        otherAttr="en-us foo bar"
+    ></div>
+
+    <p style="color: red" class="class1 class2" attr="value"></p
+></ion-content>

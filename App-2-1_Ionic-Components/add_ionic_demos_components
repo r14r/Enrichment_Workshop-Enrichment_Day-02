@@ -1,0 +1,29 @@
+#!/usr/local/bin/bash
+
+TMPDIR=tmp
+SRCREP=ionic-docs
+
+#
+mkdir -p ${TMPDIR}
+cd       ${TMPDIR}
+
+# git clone https://github.com/ionic-team/${SRCREP}.git
+# mv     ${SRCREP}/src/demos/api demos
+# rm -rf ${SRCREP}
+
+(cd demos && ls -1d *) | while read _DIR
+do
+    _DST="$(basename "$_DIR" | perl -pe 's/-(.)/\u$1/g')"
+    _DST="${_DST^}"
+    echo ionic generate page pages/$_DST
+
+    # rm   -rf           ../src/app/pages/${_DIR}/demo
+    # cp -r demos/$_DIR  ../src/app/pages/${_DIR}/demo
+done
+
+cd ..
+
+cd  src/app/pages
+
+_PAGELIST="$(grep export */*.page.ts | cut -d' ' -f3)"
+

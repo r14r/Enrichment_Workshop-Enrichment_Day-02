@@ -1,0 +1,62 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>
+			Quiz
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+	<ion-grid>
+		<ion-row>
+			<ion-col>Berechnet der Summe und <ion-input type=" number" [(ngModel)]="maxVal">
+				</ion-input>
+			</ion-col>
+		</ion-row>
+
+		<ion-row class="numbers">
+			<ion-col>{{ firstNumber }}</ion-col>
+			<ion-col>{{ calculation }}</ion-col>
+			<ion-col>{{ secondNumber }}</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col>
+				<ion-input (ionChange)="handleChange()" class="guess" type="number" placeholder="Bitte Versuch eingeben"
+					name="display" [(ngModel)]="guess">
+				</ion-input>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col>
+				<ion-button expand="block" 
+							size="large"
+							(click)="handleGuess()"
+							[disabled]="!allowGuess"
+							[hidden]="!showGuess">{{ guessText }}
+				</ion-button>
+			</ion-col>
+
+			<ion-col>
+				<ion-button	expand="block"
+							size="large"
+							(click)="handleNewGame()"
+							[hidden]="!allowNewGame">Neues Spiel
+				</ion-button>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col>
+				<h1 class="{{ resultClass }}">{{ status }}</h1>
+			</ion-col>
+		</ion-row>
+
+	</ion-grid>
+
+</ion-content>

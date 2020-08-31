@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Category
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Learn Miltary Stuff</ion-list-header>
+    <ion-item (click)="goLearn(x)" *ngFor="let x of category">
+     {{x}}
+    </ion-item>
+  </ion-list>
+</ion-content>

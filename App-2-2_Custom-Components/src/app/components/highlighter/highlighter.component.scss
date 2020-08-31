@@ -1,0 +1,15 @@
+$white: #ffffff;
+$grey: #9e9e9e;
+
+$preload-image-bg: rgba(darken($white, 10), 0.25);
+
+$spinner-size: 28px;
+$spinner-color: $grey;
+
+app-highlighter {
+    display: block;
+    background-color: $preload-image-bg;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}

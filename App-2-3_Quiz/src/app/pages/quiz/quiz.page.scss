@@ -1,0 +1,28 @@
+ion-col {
+	text-align: center;
+}
+
+ion-row.numbers {
+	ion-col {
+		border: 1px 1px gray;
+		background-color: lightgray;
+	}
+}
+
+.unknown {
+	color: white;
+	background-color: white;
+}
+
+.richtig {
+	background-color: green;
+	color: white;
+}
+
+.falsch {
+	color: red;
+}
+
+ion-input.guess {
+	text-align: center;
+}

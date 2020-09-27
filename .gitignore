@@ -1,3 +1,5 @@
+**/.env.d
+
 .env/
 
 **/.DS_Store

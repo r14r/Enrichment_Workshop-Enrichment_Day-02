@@ -8,3 +8,6 @@ node_nodules
 **/node_modules
 
 Github*/*
+**/.env.d
+**/.env
+
